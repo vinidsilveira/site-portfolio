@@ -4,120 +4,563 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinicius Silveira | Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vinicius Silveira — Desenvolvedor Front-end</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <div class="particulas"></div>
+    <!-- Background layers -->
+    <div class="bg-grain" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--hero" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--contact" aria-hidden="true"></div>
 
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contatos" class="menu-link">Contato</a>
-            </li>
-        </ul>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" role="navigation" aria-label="Navegação principal">
+        <div class="nav__inner">
+            <a href="#inicio" class="nav__logo" aria-label="Início"></a>
+
+            <ul class="nav__links" id="navLinks" role="list">
+                <li><a href="#inicio" class="nav__link">Início</a></li>
+                <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li><a href="#projetos" class="nav__link">Projetos</a></li>
+                <li><a href="#contatos" class="nav__link">Contato</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <div class="nav__social" aria-label="Redes sociais">
+                    <a href="https://github.com/vinidsilveira" target="_blank" rel="noopener noreferrer"
+                        class="nav__icon-link" aria-label="GitHub">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vinicius-silveira-dev/" target="_blank"
+                        rel="noopener noreferrer" class="nav__icon-link" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vsdev.s?igsh=YXM1em01cmc0ZjJ6&utm_source=qr" target="_blank"
+                        rel="noopener noreferrer" class="nav__icon-link" aria-label="Instagram">
+                        <i class="bi bi-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <i class="bi bi-list" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <main id="inicio" class="cabecalho">
-        <img src="img/perfil.jpeg" alt="Foto Vinicius Silveira" class="foto-perfil">
-        <h1>Vinicius Silveira</h1>
-        <p class="cabecalho-subtitulo">Desenvolvedor Front-end</p>
-    </main>
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero__inner">
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Sou o Vinicius e estou construindo meu caminho na área dev com projetos reais.
-                Atuo e venho me desenvolvendo em front-end, onde o código vira algo visível: layout, interação e
-                experiência. Meu foco é evoluir sempre e deixar cada projeto melhor que o anterior.</p>
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Construindo interfaces<br>
+                    que <span class="hero__title-gradient">comunicam</span><br>
+                    e convertem.
+                </h1>
+
+                <p class="hero__subtitle">
+                    Sou <strong>Vinicius Silveira</strong>, desenvolvedor front-end com foco em criar
+                    experiências digitais modernas, funcionais e com atenção ao design.
+                </p>
+
+                <div class="hero__ctas">
+                    <a href="#projetos" class="btn btn--primary">
+                        Ver projetos
+                        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#contatos" class="btn btn--ghost">
+                        Entrar em contato
+                    </a>
+                </div>
+
+                <div class="hero__links" aria-label="Links sociais">
+                    <a href="https://github.com/vinidsilveira" target="_blank" rel="noopener noreferrer"
+                        class="hero__link">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                    <span class="hero__link-sep" aria-hidden="true">·</span>
+                    <a href="https://www.linkedin.com/in/vinicius-silveira-dev/" target="_blank"
+                        rel="noopener noreferrer" class="hero__link">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        LinkedIn
+                    </a>
+                    <span class="hero__link-sep" aria-hidden="true">·</span>
+                    <a href="https://www.instagram.com/vsdev.s?igsh=YXM1em01cmc0ZjJ6&utm_source=qr" target="_blank"
+                        rel="noopener noreferrer" class="hero__link">
+                        <i class="bi bi-instagram" aria-hidden="true"></i>
+                        Instagram
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="hero__visual" aria-hidden="true">
+                <div class="hero__photo-wrap">
+                    <img src="img/profile.png" alt="" class="hero__photo">
+                </div>
+
+                <div class="hero__float-card hero__float-card--stack">
+                    <span class="hero__float-label">Stack</span>
+                    <div class="hero__float-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                    </div>
+                </div>
+
+                <div class="hero__float-card hero__float-card--status">
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    <span>+1 ano desenvolvendo</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+            <span>scroll</span>
+            <i class="bi bi-arrow-down"></i>
         </div>
     </section>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulos">Meus Projetos</h2>
-        <div class="projetos-caixas">
+    <!-- ========== SOBRE ========== -->
+    <section id="sobre" class="section sobre">
+        <div class="section__inner">
 
-            <div class="projetos-card">
-                <img src="img/site-fisio-2.png" alt="Projeto 1" class="projetos-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Site institucional — Clínica de Fisioterapia &amp; Pilates</h3>
-                    <p class="paragrafos-projeto">Projeto real desenvolvido para apresentar serviços, fortalecer a
-                        presença online e facilitar o contato com o studio.</p>
-                </div>
+            <div class="section__eyebrow">
+                <span class="mono">01</span>
+                <span>Sobre mim</span>
             </div>
 
-            <div class="projetos-card">
-                <img src="img/site-loja-urbanstyle.png" alt="Projeto 2" class="projetos-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Landing Page — Loja Streetwear Urban Style</h3>
-                    <p class="paragrafos-projeto">Projeto de prática focado em layout moderno para e-commerce, com
-                        identidade visual street e seções de vitrine.</p>
-                </div>
-            </div>
+            <div class="sobre__grid">
 
-            <div class="projetos-card">
-                <img src="img/site-price-cards.png" alt="Projeto 3" class="projetos-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Página de Planos — Tabela de Hospedagem (Price Cards)</h3>
-                    <p class="paragrafos-projeto">Projeto de estudo para treinar componentes de UI, comparativo de
-                        planos e hierarquia visual em cards.</p>
-                </div>
-            </div>
+                <div class="sobre__text reveal">
+                    <h2 class="section__title">
+                        Código que vira<br>
+                        <span class="text-gradient">experiência visual.</span>
+                    </h2>
 
+                    <p class="sobre__bio">
+                        Estou construindo meu caminho na área de desenvolvimento com projetos reais.
+                        Atuo em front-end, onde o código vira algo visível: layout, interação e
+                        experiência.
+                    </p>
+                    <p class="sobre__bio">
+                        Meu foco é evoluir constantemente e deixar cada projeto melhor que o anterior,
+                        com atenção aos detalhes que fazem diferença na percepção do usuário.
+                    </p>
+
+                    <div class="sobre__stats" role="list">
+                        <div class="sobre__stat" role="listitem">
+                            <span class="sobre__stat-num">3+</span>
+                            <span class="sobre__stat-label">Projetos</span>
+                        </div>
+                        <div class="sobre__stat" role="listitem">
+                            <span class="sobre__stat-num">1</span>
+                            <span class="sobre__stat-label">Cliente real</span>
+                        </div>
+                        <div class="sobre__stat" role="listitem">
+                            <span class="sobre__stat-num">+1 ano</span>
+                            <span class="sobre__stat-label">de estudo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sobre__skills reveal">
+                    <h3 class="sobre__skills-title">Habilidades</h3>
+                    <ul class="skills-grid" role="list">
+                        <li class="skill-item">
+                            <i class="bi bi-filetype-html skill-item__icon" aria-hidden="true"></i>
+                            <span>HTML5</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="bi bi-filetype-css skill-item__icon" aria-hidden="true"></i>
+                            <span>CSS3</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="bi bi-filetype-js skill-item__icon" aria-hidden="true"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="bi bi-phone skill-item__icon" aria-hidden="true"></i>
+                            <span>Responsivo</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="bi bi-git skill-item__icon" aria-hidden="true"></i>
+                            <span>Git</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="bi bi-github skill-item__icon" aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em contato</h2>
+    <!-- ========== PROJETOS ========== -->
+    <section id="projetos" class="section projetos">
+        <div class="section__inner">
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input type="text" placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem" class="campo-form" rows="6" id="mensagem"></textarea>
+            <div class="section__eyebrow">
+                <span class="mono">02</span>
+                <span>Projetos</span>
             </div>
 
-            <button type="submit" class="botao-form">
-                <i class="bi bi-whatsapp"></i>
-                Enviar WhatsApp
-            </button>
+            <h2 class="section__title reveal">
+                Trabalhos que<br>
+                <span class="text-gradient">falam por si.</span>
+            </h2>
 
-        </form>
+            <div class="projetos__grid">
 
+                <!-- 1. Gabriela Ferronatto Studio - Featured -->
+                <a class="project-card project-card--featured reveal" href="https://gabrielaferronattostudio.com.br/"
+                    target="_blank" rel="noopener noreferrer" aria-label="Ver projeto: Gabriela Ferronatto Studio">
+                    <div class="project-card__media">
+                        <img src="img/site-fisio.png" alt="Site da Clínica Gabriela Ferronatto Studio"
+                            class="project-card__img">
+                        <div class="project-card__hover" aria-hidden="true">
+                            <span class="project-card__hover-cta">
+                                Ver projeto <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <div class="project-card__meta">
+                            <span class="project-card__live-badge">
+                                <span class="project-card__live-dot" aria-hidden="true"></span>
+                                Cliente real
+                            </span>
+                            <span class="project-card__type mono">Site institucional</span>
+                        </div>
+                        <h3 class="project-card__title">Gabriela Ferronatto Studio</h3>
+                        <p class="project-card__desc">
+                            Site institucional desenvolvido para fortalecer a presença online e facilitar
+                            o contato com o studio de Fisioterapia &amp; Pilates.
+                        </p>
+                        <div class="project-card__tags" aria-label="Tecnologias">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Sub-grid: 2. Sertec + 3. Luxgold -->
+                <div class="projetos__sub">
+
+                    <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver projeto: Sertec Refrigeração">
+                        <div class="project-card__media">
+                            <img src="img/site-sertec.png" alt="Site da Sertec Refrigeração" class="project-card__img">
+                            <div class="project-card__hover" aria-hidden="true">
+                                <span class="project-card__hover-cta">
+                                    Ver projeto <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">
+                                <span class="project-card__live-badge">
+                                    <span class="project-card__live-dot" aria-hidden="true"></span>
+                                    Cliente real
+                                </span>
+                                <span class="project-card__type mono">Site institucional</span>
+                            </div>
+                            <h3 class="project-card__title">Sertec Refrigeração</h3>
+                            <p class="project-card__desc">
+                                Site institucional desenvolvido para a Sertec Refrigeração, apresentando
+                                os serviços da empresa e facilitando o contato com clientes.
+                            </p>
+                            <div class="project-card__tags" aria-label="Tecnologias">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver projeto: Luxgold Semijoias">
+                        <div class="project-card__media">
+                            <img src="img/site-luxgold.png" alt="Site da Luxgold Semijoias" class="project-card__img">
+                            <div class="project-card__hover" aria-hidden="true">
+                                <span class="project-card__hover-cta">
+                                    Ver projeto <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">
+                                <span class="project-card__live-badge">
+                                    <span class="project-card__live-dot" aria-hidden="true"></span>
+                                    Cliente real
+                                </span>
+                                <span class="project-card__type mono">Site institucional</span>
+                            </div>
+                            <h3 class="project-card__title">Luxgold Semijoias</h3>
+                            <p class="project-card__desc">
+                                Site desenvolvido para a loja de semijoias Luxgold, com vitrine de
+                                produtos e identidade visual elegante.
+                            </p>
+                            <div class="project-card__tags" aria-label="Tecnologias">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Linha completa: 4. Clínica Odontológica + 5. Urban Style -->
+                <div class="projetos__sub projetos__sub--row">
+
+                    <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver projeto: Clínica Odontológica Modelo">
+                        <div class="project-card__media">
+                            <img src="img/site-dentista-modelo.png" alt="Site modelo de clínica odontológica"
+                                class="project-card__img">
+                            <div class="project-card__hover" aria-hidden="true">
+                                <span class="project-card__hover-cta">
+                                    Ver projeto <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">
+                                <span class="project-card__type mono">Site modelo</span>
+                            </div>
+                            <h3 class="project-card__title">Clínica Odontológica</h3>
+                            <p class="project-card__desc">
+                                Site modelo para clínica odontológica com layout clean e foco em
+                                conversão de novos pacientes.
+                            </p>
+                            <div class="project-card__tags" aria-label="Tecnologias">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card reveal" href="https://vinidsilveira.github.io/projeto-site-urbanstyle/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Ver projeto: Urban Style">
+                        <div class="project-card__media">
+                            <img src="img/site-loja-urbanstyle.png" alt="Landing page Urban Style"
+                                class="project-card__img">
+                            <div class="project-card__hover" aria-hidden="true">
+                                <span class="project-card__hover-cta">
+                                    Ver projeto <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">
+                                <span class="project-card__type mono">Landing Page</span>
+                            </div>
+                            <h3 class="project-card__title">Urban Style</h3>
+                            <p class="project-card__desc">
+                                Landing page para e-commerce streetwear com identidade visual urban.
+                            </p>
+                            <div class="project-card__tags" aria-label="Tecnologias">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section id="contatos" class="section contatos">
+        <div class="section__inner">
+
+            <div class="section__eyebrow">
+                <span class="mono">03</span>
+                <span>Contato</span>
+            </div>
+
+            <div class="contatos__grid">
+
+                <div class="contatos__info reveal">
+                    <h2 class="section__title">
+                        Vamos construir<br>
+                        <span class="text-gradient">algo juntos?</span>
+                    </h2>
+                    <p class="contatos__desc">
+                        Estou disponível para freelances, projetos e oportunidades.
+                        Me envie uma mensagem e responderei em breve.
+                    </p>
+
+                    <ul class="contato-list" role="list">
+                        <li>
+                            <a href="mailto:viniciusddsilveira@gmail.com" class="contato-item">
+                                <i class="bi bi-envelope contato-item__icon" aria-hidden="true"></i>
+                                <div class="contato-item__text">
+                                    <span class="contato-item__label">E-mail</span>
+                                    <span class="contato-item__value">viniciusddsilveira@gmail.com</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right contato-item__arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/vinidsilveira" target="_blank" rel="noopener noreferrer"
+                                class="contato-item">
+                                <i class="bi bi-github contato-item__icon" aria-hidden="true"></i>
+                                <div class="contato-item__text">
+                                    <span class="contato-item__label">GitHub</span>
+                                    <span class="contato-item__value">@vinidsilveira</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right contato-item__arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vinicius-silveira-dev/" target="_blank"
+                                rel="noopener noreferrer" class="contato-item">
+                                <i class="bi bi-linkedin contato-item__icon" aria-hidden="true"></i>
+                                <div class="contato-item__text">
+                                    <span class="contato-item__label">LinkedIn</span>
+                                    <span class="contato-item__value">Vinicius Silveira</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right contato-item__arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vsdev.s?igsh=YXM1em01cmc0ZjJ6&utm_source=qr"
+                                target="_blank" rel="noopener noreferrer" class="contato-item">
+                                <i class="bi bi-instagram contato-item__icon" aria-hidden="true"></i>
+                                <div class="contato-item__text">
+                                    <span class="contato-item__label">Instagram</span>
+                                    <span class="contato-item__value">@vsdev.s</span>
+                                </div>
+                                <i class="bi bi-arrow-up-right contato-item__arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contatos__form-col reveal">
+                    <form class="form" id="formulario" onsubmit="enviarWhats(event)" novalidate>
+                        <div class="form__group">
+                            <label for="nome" class="form__label">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form__input" placeholder="Seu nome"
+                                autocomplete="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="mensagem" class="form__label">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form__input form__textarea" rows="5"
+                                placeholder="Como posso ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                            Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__inner">
+            <span class="footer__copy mono">© 2026 Vinicius Silveira</span>
+            <nav class="footer__social" aria-label="Links sociais">
+                <a href="https://github.com/vinidsilveira" target="_blank" rel="noopener noreferrer"
+                    class="footer__icon-link" aria-label="GitHub">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vinicius-silveira-dev/" target="_blank" rel="noopener noreferrer"
+                    class="footer__icon-link" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/vsdev.s?igsh=YXM1em01cmc0ZjJ6&utm_source=qr" target="_blank"
+                    rel="noopener noreferrer" class="footer__icon-link" aria-label="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+    </footer>
 
     <script>
+        // WhatsApp handler
         function enviarWhats(event) {
-            event.preventDefault()
-
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5551996217104'
-
-            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
-            const msgFormatada = encodeURIComponent(texto)
-
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-            window.open(url, '_blank')
-
+            event.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            if (!nome || !mensagem) return;
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const url = `https://wa.me/5551996217104?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
         }
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        navLinks.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll reveal with stagger
+        const revealEls = [...document.querySelectorAll('.reveal')];
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const idx = revealEls.indexOf(entry.target);
+                    entry.target.style.transitionDelay = `${Math.min(idx * 50, 220)}ms`;
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const allNavLinks = document.querySelectorAll('.nav__link');
+        const onScroll = () => {
+            const y = window.scrollY + 120;
+            sections.forEach(section => {
+                if (y >= section.offsetTop && y < section.offsetTop + section.offsetHeight) {
+                    allNavLinks.forEach(l => l.classList.remove('is-active'));
+                    const active = document.querySelector(`.nav__link[href="#${section.id}"]`);
+                    if (active) active.classList.add('is-active');
+                }
+            });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
     </script>
+
 </body>
 
 </html>
